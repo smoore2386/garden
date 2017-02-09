@@ -1,4 +1,4 @@
-# remote-data-storage-ui
+# nav
 
 >An Angular2 project to serve as a core with base router to navbar functionality
 
