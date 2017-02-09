@@ -135,7 +135,7 @@ npm-bump major|minor|patch
 
 ## Authors
 
-* *smoore2386** - wishing I was a a charmeleon
+* *smoore2386** - ..
 
 
 ## Further help
