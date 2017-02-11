@@ -1,12 +1,10 @@
-<ul [class]='getStyleClass()'>
-  <li *ngFor="let menuItem of menuItems">
+<md-toolbar-row>
+  <button md-button *ngFor="let menuItem of menuItems">
     <a [routerLink]="[menuItem.route]"
-      on-mouseover='menuItem.toggleChild()'
-      >{{menuItem.name}}</a>
-      <i *ngIf="menuItem.hasArrow()" class="fa fa-sort-desc fa-1x" aria-hidden="true"> </i>    
-      <app-nav-menu  *ngIf="menuItem.hasChildren" 
-        [hidden]="!menuItem.collapsed" 
-        [menuItems]="menuItem.children">
-      </app-nav-menu>
-  </li>
-</ul>
+      on-mouseover='menuItem.toggleChild()'>{{menuItem.name}}</a>
+      <app-nav-menu  *ngIf="menuItem.hasChildren"
+            [hidden]="!menuItem.collapsed"
+            [menuItems]="menuItem.children">
+          </app-nav-menu>
+    </button>
+<md-toolbar-row>
