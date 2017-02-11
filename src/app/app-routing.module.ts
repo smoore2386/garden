@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TestComponent } from './test/test.component';
 
   export const appRoutes: Routes = [
   {
     path: '',
     children: [],
+    component: TestComponent,
     data:{
       title: "SomeTitle"
     }
   },
   {
     path:'',
-    component:AppComponent,
     children:[],
     data:{
       title: 'SomeTitle2'

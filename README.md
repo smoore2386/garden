@@ -56,8 +56,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Deployment
 
-Deployment will be handled by loading js files /project to FMC and pointing the current GWT project there.
-
 
 ## Testing
 

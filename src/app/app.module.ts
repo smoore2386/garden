@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestComponent,
   ],
   imports: [
     CoreModule,
