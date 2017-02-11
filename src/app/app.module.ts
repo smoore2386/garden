@@ -8,11 +8,13 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { TestComponent } from './test/test.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
+    HomeComponent,
   ],
   imports: [
     CoreModule,
