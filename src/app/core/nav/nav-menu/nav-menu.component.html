@@ -1,7 +1,7 @@
 <md-toolbar-row>
-  <button md-button *ngFor="let menuItem of menuItems">
-    <a [routerLink]="[menuItem.route]"
-      on-mouseover='menuItem.toggleChild()'>{{menuItem.name}}</a>
+  <button md-button *ngFor="let menuItem of menuItems"
+          [routerLink]="menuItem.route"
+          on-mouseover='menuItem.toggleChild()'>{{menuItem.name}}
       <app-nav-menu  *ngIf="menuItem.hasChildren"
             [hidden]="!menuItem.collapsed"
             [menuItems]="menuItem.children">

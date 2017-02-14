@@ -15,14 +15,6 @@ import { HomeComponent } from './home/home.component';
     path:'home',
     component:HomeComponent,
     children:[
-      {
-        path: 'home/subhome1',
-        children: [],
-        component: TestComponent,
-        data:{
-          title: "SubTitle1"
-        }
-      },
     ],
     data:{
       title: 'SomeTitle2'

@@ -24,7 +24,6 @@ export class NavMenuComponent implements OnInit {
     return this.styleClass;
   }
   setStyleClass(style:string){
-    console.log("setting style class");
     this.styleClass = style;
     this.menuItems[0].getStyle();
   }
@@ -33,11 +32,11 @@ export class NavMenuComponent implements OnInit {
   }
 }
 export class MenuItem{
- 
+
   public route: string;
   public name: string;
   private children: Routes;
-  private data: any; 
+  private data: any;
   private hasChildren:boolean;
   public collapsed = false;
   private urlSerializer: DefaultUrlSerializer;
@@ -50,7 +49,8 @@ export class MenuItem{
               menuCount,
               data?)
   {
-    this.route = _.split(route, '/')[0];
+    console.log(route);
+    this.route = "/" + route;
     this.name = name;
     this.data = data;
     this.hasChildren = !_.isEmpty(childs);
@@ -95,4 +95,3 @@ export class MenuItem{
   }
 
 }
-
