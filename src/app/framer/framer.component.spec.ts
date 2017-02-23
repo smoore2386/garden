@@ -23,6 +23,13 @@ describe('FramerComponent', () => {
   });
 
   it('should create', () => {
+    let element = fixture.nativeElement;
+    console.log(element);
     expect(component).toBeTruthy();
   });
+  it('should create', () => {
+      
+  });
+
 });
+    

@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
+import { FramerComponent } from './framer/framer.component';
 
-  export const appRoutes: Routes = [
+export const appRoutes: Routes = [
   {
-    path: '',
-    component: TestComponent,
+    path: 'framer/:path',
+    component: FramerComponent,
     data:{
-      title: "SomeTitle"
+      title: "SomeTitle",
+      framerPath:'myindex.html'
     }
   },
   {

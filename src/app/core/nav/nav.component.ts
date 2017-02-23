@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Routes, Route } from '@angular/router';
-import { MenuItem } from './nav-menu/nav-menu.component'
+import { MenuItem } from './nav-menu/menu-item'
 import { appRoutes } from '../../app-routing.module'
 
 import * as _ from "lodash";
