@@ -1,0 +1,31 @@
+<form [formGroup]="form" novalidate>
+  <md-list formArrayName="plants">
+    <md-card *ngFor="let plant of form.controls['plants'].controls; let i=index">
+      <div [formGroupName]="i">
+	<md-input  placeholder="Enter a Plant" type="text"
+		   id="plantName" formControlName="plantName" ></md-input>
+	<button md-icon-button color="primary"
+		class="addPlantButton"  (click)="addPlant()">
+	  <md-icon>add</md-icon>
+	</button>
+      </div>
+    </md-card>
+  </md-list>
+  <button md-raised-button [disabled]="!form.valid"  color="accent"
+	  (click)="deploy()">Deploy</button>
+  <button md-raised-button  color="accent"
+	  (click)="cancel()">Cancel</button>
+</form>
+
+<p>Value: {{ form.value | json }}</p>
+<p>Validation status: {{ form.status }}</p>
+<p>Validation status: {{ form.valid }}</p>
+
+
+
+
+
+
+
+
+                                                    
