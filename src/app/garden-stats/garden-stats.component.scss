@@ -1,0 +1,34 @@
+:host{
+    display:flex;
+    width:70%;
+    margin-left:5em;
+}
+
+div{
+    font-size: 15px;
+    &.retentionContainer{
+        flex: 0 0 35%;
+    }
+    &.stats{
+        flex:1;
+    }
+    p{
+        font-size:12px;
+        font-weight: bold;
+        color:#822929;
+        margin:0em;
+    }
+    label{
+        font-size:12px;
+    }
+    ul{
+        margin-top:0em;
+        list-style-type: none;
+        padding-right: 1em;
+        li{
+            margin: 0em 1em 0em 0em;
+            font-size: 11px;
+        }
+    }
+} 
+
