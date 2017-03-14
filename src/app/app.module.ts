@@ -11,13 +11,15 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { FramerComponent } from './framer/framer.component';
 import { GardenStatsComponent } from './garden-stats/garden-stats.component';
+import { AddPlantsComponent } from './add-plants/add-plants.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FramerComponent,
-    GardenStatsComponent
+    GardenStatsComponent,
+    AddPlantsComponent
   ],
   imports: [
     CoreModule,
