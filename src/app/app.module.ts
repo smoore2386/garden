@@ -7,16 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { TestComponent } from './test/test.component';
+
 import { HomeComponent } from './home/home.component';
 import { FramerComponent } from './framer/framer.component';
+import { GardenStatsComponent } from './garden-stats/garden-stats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
     HomeComponent,
-    FramerComponent
+    FramerComponent,
+    GardenStatsComponent
   ],
   imports: [
     CoreModule,
@@ -24,7 +25,7 @@ import { FramerComponent } from './framer/framer.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    MaterialModule.forRoot()
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

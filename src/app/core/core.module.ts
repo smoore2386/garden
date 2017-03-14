@@ -14,7 +14,7 @@ import { NavMenuComponent } from './nav/nav-menu/nav-menu.component';
 
 // Core Features of our application defined here 
 @NgModule({
-  imports: [CommonModule,AppRoutingModule, MaterialModule.forRoot()],
+  imports: [CommonModule,AppRoutingModule, MaterialModule],
   exports: [NavComponent],
   declarations: [NavComponent,  NavMenuComponent],
   providers: [LoggerService]

@@ -6,23 +6,22 @@ import { FramerComponent } from './framer/framer.component';
 
 export const appRoutes: Routes = [
   {
-    path: 'framer/:path',
-    component: FramerComponent,
-    data:{
-      title: "SomeTitle",
-      framerPath:'myindex.html'
-    }
-  },
-  {
     path:'home',
     component:HomeComponent,
     children:[
     ],
     data:{
-      title: 'SomeTitle2'
+      title: 'Home'
     }
+  },
+  {
+    path: 'garden/add',
+    component: FramerComponent,
+    data:{
+      title: "Add Plant",
+    }
+  },
 
-  }
 ];
 
 @NgModule({
