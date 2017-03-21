@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TestComponent } from './test/test.component';
 import { HomeComponent } from './home/home.component';
 import { FramerComponent } from './framer/framer.component';
+import { AddPlantsComponent } from './add-plants/add-plants.component';
 
 export const appRoutes: Routes = [
   {
@@ -16,7 +16,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'garden/add',
-    component: FramerComponent,
+    component: AddPlantsComponent,
     data:{
       title: "Add Plant",
     }
