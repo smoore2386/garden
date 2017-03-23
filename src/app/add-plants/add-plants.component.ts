@@ -1,7 +1,8 @@
 import { Component, OnInit, OnChanges, OnDestroy, Input, EventEmitter, Output, Inject }from '@angular/core';
 import {  FormGroup,FormArray,  FormBuilder,  Validators  } from '@angular/forms';
 import { PlantService } from '../shared/plant.service';
-import {MdIconRegistry} from '@angular/material';
+import { MdIconRegistry } from '@angular/material';
+import { Plant } from '../shared/plant';
 
 import * as _ from "lodash";
 
@@ -43,15 +44,9 @@ export class AddPlantsComponent  implements OnInit{
     //call the service which will handle the planting of our plants
   }
   ngOnInit() {
-        this.form = this.fb.group({ plants: this.fb.array([
+    this.form = this.fb.group({ plants: this.fb.array([
         this.initPlant()
     ])});
     }
-  }
+}    
 
-
-    
-
-export interface Plant{
-    name:string;
-}
