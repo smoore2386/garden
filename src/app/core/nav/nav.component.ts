@@ -28,11 +28,16 @@ export class NavComponent implements OnInit{
   * @return {MenuItem} MenuItem interpretation of route.
   */
   routeToMenuItem(route:Route):MenuItem{
-      return new MenuItem(route.path, String(_.get(route.data,"title")),
-          route.children,0,route.data)
+
+        if(route.redirectTo == null){
+            console.log(route);
+            return new MenuItem(route.path, String(_.get(route.data,"title")),
+                route.children,0,route.data)
+        }
   }
 
   ngOnInit() {
-        this.menuItems =_.map(appRoutes,this.routeToMenuItem);
+        this.menuItems = _.pull(_.map(appRoutes,this.routeToMenuItem), undefined);
+        console.log(this.menuItems);
   }
 }
