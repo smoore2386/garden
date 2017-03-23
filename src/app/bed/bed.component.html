@@ -1,0 +1,9 @@
+<md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile
+     *ngFor="let plant of plants"
+     [colspan]="3"
+     [rowspan]="3"
+     [style.background]="accent">
+    <app-plant></app-plant>
+  </md-grid-tile>
+</md-grid-list>
