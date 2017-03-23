@@ -25,6 +25,7 @@ export class NavMenuComponent implements OnInit {
   }
   setStyleClass(style:string){
     this.styleClass = style;
+    console.log(this.menuItems);
     this.menuItems[0].getStyle();
   }
   ngOnInit() {

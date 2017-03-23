@@ -45,7 +45,7 @@ export class MenuItem{
     if(this.hasChildren){
       this.children = _.map(childs,_.bind(this.routeToMenuItem,this));
     }
-    if(data.framerPath != null){
+    if(data != null && data.framerPath != null){
         
       let tmpUrl =  this.urlSerializer.parse(data.framerPath).toString();
       this.route = route.split('/')[0]  + tmpUrl;
