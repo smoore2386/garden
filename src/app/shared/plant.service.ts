@@ -1,24 +1,19 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
+import { Plant } from './plant';
+
 import * as _ from "lodash";
 
 @Injectable()
-export class PlantsService{
+export class PlantService{
+  private userId:number;
 
   plants:Plant[];
-  
   constructor(private http:Http){}
   
-
-  getPlants(){
-    return this.http.get('user')
-      .map(
-        (resp) => {
-            console.log(resp.json());
-            return _.get(resp.json(),'plants') as Plant[];
-        });
-        
+  getPlants():Plants[]{
+    return [new Plant("Rose", "Flora"), new Plant("Tulip", "Something something")];
   }
 
   logError(err): void {

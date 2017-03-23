@@ -1,4 +1,3 @@
-export interface Plant{
-  name:string;
-  sciName:string;
+export class Plant{
+  constructor(name:string,sciName:string){}
 }
