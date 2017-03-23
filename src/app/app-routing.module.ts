@@ -5,6 +5,7 @@ import { FramerComponent } from './framer/framer.component';
 import { AddPlantsComponent } from './add-plants/add-plants.component';
 
 export const appRoutes: Routes = [
+ { path: '', redirectTo: '/home', pathMatch: 'full' },
   {
     path:'home',
     component:HomeComponent,
@@ -14,6 +15,8 @@ export const appRoutes: Routes = [
       title: 'Home'
     }
   },
+ 
+
   {
     path: 'garden/add',
     component: AddPlantsComponent,

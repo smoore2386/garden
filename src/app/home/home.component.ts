@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PlantsService } from '../add-plants/plants.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
-  ngOnInit() {}
+  private plants: any;
+  constructor(private plantsService: PlantsService){
+    this.plantsService.getPlants().subscribe(res => this.plants = res);
+  }
+  ngOnInit() {
+      
+  }
 
 }

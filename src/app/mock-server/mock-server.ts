@@ -12,36 +12,23 @@ export function httpFactory(backend:MockBackend, options: BaseRequestOptions){
 
       
       if (connection.request.url === ('/user') 
-          && connection.request.method === RequestMethod.Post) {
+          && connection.request.method === RequestMethod.Get) {
         connection.mockRespond(new Response( new ResponseOptions({
-          body: JSON.stringify({data:'1'})})))
+          body: JSON.stringify({ name: 'Sonya Reichel',
+			         username: 'admin',
+			         password: 'admin',
+			         location: 'Rhode Island',
+			         created_at: '2016-04-26T01:22:13.584Z',
+			         updated_at: '2017-03-22T16:52:39.672Z',
+			         _id: '58d3d1e46eb3de184c384332',
+			         plants: ['Snap Peas','Broccolli'] })})))
       }
 
-      if (connection.request.url === ('/user/login') && connection.request.method === RequestMethod.Post) {
-        connection.mockRespond(new Response( new ResponseOptions({
-          body: JSON.stringify()})));
-      }  
       // logout
       if (connection.request.url.endsWith('/user/logout') 
           && connection.request.method === RequestMethod.Get) {
           connection.mockRespond(new Response( new ResponseOptions({
             body: JSON.stringify("1")})));
-      }
-
-
-      if (connection.request.url.endsWith('roboadmin/advancedOptions') 
-          && connection.request.method === RequestMethod.Get) {
-          
-        connection.mockRespond(new Response( new ResponseOptions({
-          body: JSON.stringify({eventRetention:{connection:90,file:10},replicationFactor:2})})));
-      }
-
-      if (connection.request.url.endsWith('pjb/list/getPageData') 
-          && connection.request.method === RequestMethod.Get) {
-          
-      
-        connection.mockRespond(new Response( new ResponseOptions({
-          body: JSON.stringify()})));
       }
 
     }, 500);

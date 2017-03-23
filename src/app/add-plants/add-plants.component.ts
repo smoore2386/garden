@@ -25,15 +25,12 @@ export class AddPlantsComponent  implements OnInit{
   constructor(private fb: FormBuilder) {}
 
   addPlant(){
-      console.log("here");
     const ctrl = <FormArray>this.form.controls['plants'];
     ctrl.push(this.initPlant());
   }
  
-
   onTab(idx){
-    const ctrl =  <FormArray>this.form.controls['plants'];
-
+    // input logic for adding and removing elements
   }
 
   initPlant(){
