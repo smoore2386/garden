@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Plant } from '../shared/plant';
-import { PlantsService } from '../shared/plants.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { Plant } from '../../shared/plant';
+import { PlantService } from '../../shared/plant.service';
 
 @Component({
   selector: 'app-plant',

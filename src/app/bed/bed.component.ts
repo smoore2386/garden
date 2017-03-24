@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { Plant } from '../shared/plant';
 @Component({
   selector: 'app-bed',
   templateUrl: './bed.component.html',

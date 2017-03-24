@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlantsService } from '../add-plants/plants.service';
+import { PlantService } from '../shared/plant.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

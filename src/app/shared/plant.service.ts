@@ -12,7 +12,7 @@ export class PlantService{
   plants:Plant[];
   constructor(private http:Http){}
   
-  getPlants():Plants[]{
+  getPlants():Plant[]{
     return [new Plant("Rose", "Flora"), new Plant("Tulip", "Something something")];
   }
 

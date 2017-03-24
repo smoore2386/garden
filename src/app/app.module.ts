@@ -13,18 +13,17 @@ import { CoreModule } from './core/core.module';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 
 import { HomeComponent } from './home/home.component';
-import { FramerComponent } from './framer/framer.component';
 import { GardenStatsComponent } from './garden-stats/garden-stats.component';
 import { AddPlantsComponent } from './add-plants/add-plants.component';
 import { mockServerProvider } from './mock-server/index';
-import { PlantsService } from './add-plants/plants.service';
+import { PlantService } from './shared/plant.service';
 import { BedComponent } from './bed/bed.component';
 import { PlantComponent } from './bed/plant/plant.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FramerComponent,
     GardenStatsComponent,
     AddPlantsComponent,
     BedComponent,
@@ -39,7 +38,7 @@ import { PlantComponent } from './bed/plant/plant.component';
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [PlantsService, mockServerProvider,
+  providers: [PlantService, mockServerProvider,
       MockBackend,
     BaseRequestOptions],
   bootstrap: [AppComponent]
